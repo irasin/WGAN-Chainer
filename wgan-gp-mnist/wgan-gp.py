@@ -1,6 +1,3 @@
-### In chainerV3 we can use chainer.grad so it becomes much easier to write a WGAN-GP code since it use gradients in loss function.Please check wgan-gp1.py
-
-
 import argparse
 import os
 import numpy as np
