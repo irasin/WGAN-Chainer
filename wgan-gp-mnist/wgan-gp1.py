@@ -191,6 +191,7 @@ class WGANGPUpdater(training.StandardUpdater):
             loss2 = F.average(y_fake)
 
             # gp
+            # using chainer.grad here
             eps = xp.random.uniform(0, 1, size=self.batchsize).astype("f")[:, None, None, None]
             x_mid = eps * x_real + (1.0 - eps) * x_fake
             y_mid = self.critic(x_mid)
